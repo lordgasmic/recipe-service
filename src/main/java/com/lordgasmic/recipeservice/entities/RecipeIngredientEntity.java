@@ -1,19 +1,19 @@
 package com.lordgasmic.recipeservice.entities;
 
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.EmbeddedId;
-import jakarta.persistence.Entity;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.List;
 
 @Data
-@Entity(name = "recipe_ingredients_vw")
+@Entity
+@Table(name = "recipe_ingredients_vw")
 public class RecipeIngredientEntity {
 
-    @EmbeddedId
-    private RecipeIngredientPK recipeIngredientPK;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+    private long recipeId;
 
     private String quantity;
 

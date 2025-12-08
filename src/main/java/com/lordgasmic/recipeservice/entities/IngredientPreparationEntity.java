@@ -1,14 +1,16 @@
 package com.lordgasmic.recipeservice.entities;
 
-import jakarta.persistence.EmbeddedId;
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Data
-@Entity(name = "ingredient_preparations_vw")
+@Entity
+@Table(name = "ingredient_preparations_vw")
 public class IngredientPreparationEntity {
 
-    @EmbeddedId
-    private IngredientPreparationPK ingredientPreparationPK;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+    private long ingredientId;
     private String preparation;
 }
