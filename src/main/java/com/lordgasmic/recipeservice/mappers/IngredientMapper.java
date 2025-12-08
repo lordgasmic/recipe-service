@@ -11,14 +11,15 @@ public final class IngredientMapper {
 
     public static Ingredient toIngredient(final RecipeIngredientEntity entity) {
         return Ingredient.builder()
-                         .id(entity.getRecipeIngredientPK().getId())
-                         .quantity(entity.getQuantity())
-                         .uom(entity.getUom())
-                         .ingredient(entity.getIngredient())
-                         .preparations(entity.getPreparations()
-                                             .stream()
-                                             .map(IngredientPreparationMapper::toIngredientPreparation)
-                                             .toList())
-                         .build();
+                .id(entity.getId())
+                .recipeId(entity.getRecipeId())
+                .quantity(entity.getQuantity())
+                .uom(entity.getUom())
+                .ingredient(entity.getIngredient())
+                .preparations(entity.getPreparations()
+                        .stream()
+                        .map(IngredientPreparationMapper::toIngredientPreparation)
+                        .toList())
+                .build();
     }
 }

@@ -7,5 +7,6 @@ import lombok.Data;
 @Builder
 public class Direction {
     private long id;
+    private long recipeId;
     private String direction;
 }

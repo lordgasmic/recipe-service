@@ -11,8 +11,9 @@ public final class DirectionMapper {
 
     public static Direction toDirection(final RecipeDirectionEntity entity) {
         return Direction.builder()
-                        .id(entity.getRecipeDirectionPK().getId())
-                        .direction(entity.getDirection())
-                        .build();
+                .id(entity.getId())
+                .recipeId(entity.getRecipeId())
+                .direction(entity.getDirection())
+                .build();
     }
 }

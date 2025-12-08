@@ -7,5 +7,6 @@ import lombok.Data;
 @Builder
 public class IngredientPreparation {
     private long id;
+    private long ingredientId;
     private String preparation;
 }

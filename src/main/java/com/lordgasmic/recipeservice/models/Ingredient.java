@@ -9,6 +9,7 @@ import java.util.List;
 @Builder
 public class Ingredient {
     private long id;
+    private long recipeId;
     private String quantity;
     private String uom;
     private String ingredient;

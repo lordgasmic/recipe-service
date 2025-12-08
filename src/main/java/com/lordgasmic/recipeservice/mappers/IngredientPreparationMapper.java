@@ -9,10 +9,11 @@ public final class IngredientPreparationMapper {
         // intentionally left blank
     }
 
-    public static IngredientPreparation toIngredientPreparation(IngredientPreparationEntity entity) {
+    public static IngredientPreparation toIngredientPreparation(final IngredientPreparationEntity entity) {
         return IngredientPreparation.builder()
-                                    .id(entity.getIngredientPreparationPK().getId())
-                                    .preparation(entity.getPreparation())
-                                    .build();
+                .id(entity.getId())
+                .ingredientId(entity.getIngredientId())
+                .preparation(entity.getPreparation())
+                .build();
     }
 }
