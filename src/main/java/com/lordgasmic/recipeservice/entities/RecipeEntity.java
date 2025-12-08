@@ -10,8 +10,7 @@ import lombok.Data;
 import java.util.List;
 
 @Data
-@Entity
-@Table(name = "recipes_vw")
+@Entity(name = "recipes_vw")
 public class RecipeEntity {
 
     @Id

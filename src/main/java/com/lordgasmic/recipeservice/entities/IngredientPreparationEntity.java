@@ -6,8 +6,7 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 @Data
-@Entity
-@Table(name = "ingredient_preparations_vw")
+@Entity(name = "ingredient_preparations_vw")
 public class IngredientPreparationEntity {
 
     @EmbeddedId

@@ -10,8 +10,7 @@ import lombok.Data;
 import java.util.List;
 
 @Data
-@Entity
-@Table(name = "recipe_ingredients_vw")
+@Entity(name = "recipe_ingredients_vw")
 public class RecipeIngredientEntity {
 
     @EmbeddedId

@@ -6,8 +6,7 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 @Data
-@Entity
-@Table(name = "recipe_directions_vw")
+@Entity(name = "recipe_directions_vw")
 public class RecipeDirectionEntity {
 
     @EmbeddedId
