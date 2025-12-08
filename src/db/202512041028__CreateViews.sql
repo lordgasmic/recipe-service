@@ -8,7 +8,7 @@ INSERT
 ,
 UPDATE,
 DELETE
-on recipes_db.recipes_vw to 'recipe_user'@'%';
+on recipe_db.recipes_vw to 'recipe_user'@'%';
 
 create
 or replace view recipe_ingredients_vw as
@@ -20,7 +20,7 @@ INSERT
 ,
 UPDATE,
 DELETE
-on recipes_db.recipe_ingredients_vw to 'recipe_user'@'%';
+on recipe_db.recipe_ingredients_vw to 'recipe_user'@'%';
 
 create
 or replace view ingredient_preparations_vw as
@@ -32,7 +32,7 @@ INSERT
 ,
 UPDATE,
 DELETE
-on recipes_db.ingredient_preparations_vw to 'recipe_user'@'%';
+on recipe_db.ingredient_preparations_vw to 'recipe_user'@'%';
 
 create
 or replace view recipe_directions_vw as
@@ -44,7 +44,7 @@ INSERT
 ,
 UPDATE,
 DELETE
-on recipes_db.recipe_directions_vw to 'recipe_user'@'%';
+on recipe_db.recipe_directions_vw to 'recipe_user'@'%';
 
 FLUSH
 PRIVILEGES;
