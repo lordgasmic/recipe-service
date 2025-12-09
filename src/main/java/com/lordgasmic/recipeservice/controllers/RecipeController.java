@@ -20,7 +20,9 @@ public class RecipeController {
 
     @GetMapping("/api/v1/recipes")
     public ResponseEntity<List<RecipeResponse>> getRecipes() {
-        return ResponseEntity.ok(recipeService.getAllRecipes());
+        return ResponseEntity.ok(List.of(RecipeResponse.builder().name("derp").build()));
+
+//        return ResponseEntity.ok(recipeService.getAllRecipes());
     }
 
     @GetMapping("/api/v1/recipes/{id}")
