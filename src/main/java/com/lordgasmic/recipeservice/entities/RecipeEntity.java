@@ -19,8 +19,10 @@ public class RecipeEntity {
     private String description;
 
     @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "recipe_id")
     private List<RecipeIngredientEntity> ingredients;
 
     @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "recipe_id")
     private List<RecipeDirectionEntity> directions;
 }

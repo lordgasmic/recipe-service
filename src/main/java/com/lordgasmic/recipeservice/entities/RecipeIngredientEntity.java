@@ -22,5 +22,6 @@ public class RecipeIngredientEntity {
     private String ingredient;
 
     @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "ingredient_id")
     private List<IngredientPreparationEntity> preparations;
 }
