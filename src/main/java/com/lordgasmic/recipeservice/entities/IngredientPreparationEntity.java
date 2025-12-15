@@ -11,6 +11,7 @@ public class IngredientPreparationEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    @Column(name = "ingredient_id")
     private long ingredientId;
     private String preparation;
 }

@@ -11,6 +11,7 @@ public class RecipeDirectionEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    @Column(name = "recipe_id")
     private long recipeId;
     private String direction;
 }
